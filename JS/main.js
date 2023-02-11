@@ -15,3 +15,19 @@ blueBtn.onclick = function makeBlue() {
     document.body.style.backgroundColor = 'blue';
 
 }
+// option:4
+const pinkBtn = document.getElementById('pink-btn');
+pinkBtn.addEventListener('click', makePink);
+function makePink() {
+    document.body.style.backgroundColor = 'pink';
+}
+// option:4 another
+const greenBtn = document.getElementById('green-btn');
+greenBtn.addEventListener('click', function makeGreen() {
+    document.body.style.backgroundColor = 'green';
+
+})
+// final option
+document.getElementById('goldenrod-btn').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'goldenrod';
+})
