@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final event options</title>
+</head>
+
+<body>
+    <h1 id="heading1">This two options are final for handling event</h1>
+    <h2 id="heading2">Deafult heading text</h2>
+    <p id="changable-text">This text will change according to the input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="changeText()">Change heading text</button>
+    <button id="text-changing-btn">Change main heading</button>
+
+    <script>
+        function changeText() {
+            document.getElementById('heading2').innerText = 'This heading text coming from onclick event';
+        }
+        document.getElementById('text-changing-btn').addEventListener('click', function () {
+            document.getElementById('heading1').innerText = 'This is a heading text from click event';
+        });
+
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const changedText = document.getElementById('changable-text');
+            const inputText = document.getElementById('input-field');
+            changedText.innerText = inputText.value;
+            inputText.value = '';
+
+        })
+    </script>
+</body>
+
+</html>
