@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More events</title>
+</head>
+
+<body>
+    <h1>Explore more events</h1>
+    <button id="btn-more">Events</button>
+    <input id="input-field" type="text">
+    <script>
+        const inputField = document.getElementById('input-field');
+        document.getElementById('btn-more').addEventListener('click', function () {
+            console.log('Event triggered');
+        });
+        inputField.addEventListener('focus', function () {
+            console.log('Focus event triggered');
+        });
+        inputField.addEventListener('mouseenter', function () {
+            console.log('Mouse enter event triggered');
+        });
+        inputField.addEventListener('mousemove', function () {
+            console.log('Mouse move event triggered');
+        });
+        inputField.addEventListener('blur', function () {
+            console.log('Blur event triggered');
+        });
+        // inputField.addEventListener('keypress', function (event) {
+        //     console.log(event.key);
+        // });
+        // inputField.addEventListener('keypress', function (event) {
+        //     console.log(event.target.value);
+        // });
+        // inputField.addEventListener('keyup', function (event) {
+        //     console.log(event.target.value);
+        // });
+        // inputField.addEventListener('keydown', function (event) {
+        //     console.log(event.target.value);
+        // });
+        inputField.addEventListener('keydown', function (event) {
+            console.log(event.target.value);
+        });
+
+    </script>
+</body>
+
+</html>
